@@ -9,9 +9,12 @@
 :root{
     --dark-mode-bg: #20202a;
     --dark-mode-profile:#23232f;
+    --title-color:#7f7f82;
+    --principal-title:#fafafc;
+    --font-size:clamp(.60em,8vw,.70em)
 }
 body{
-    background-color: var(--dark-mode-bg);
+    background-color: #7f7f82;
 }
 
 .main-header {
@@ -20,25 +23,26 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    box-shadow: 0px 2px 8px 5px #2b2b36a9;
-    padding: 0 20px;
+    box-shadow: 0px 2px 8px 5px #2b2b365d;
+    padding: 10px 20px;
+    background-color: var(--dark-mode-bg);
   }
   .main-header .menu-profile a{
     display: flex;
     flex-direction: column;
     gap: 3px;
+    cursor: pointer;
   }
   .main-header .menu-profile a span{
     display: block;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: aliceblue;
     border-radius: 100%;
     cursor: pointer;
   }
   .main-header .main-logo{
-    max-width: 30px;
-    padding: 5px 0;
+    max-width: 20px;
   }
   .main-header .main-logo a img{
     width: 100%;
@@ -46,9 +50,52 @@ body{
   .main-header .profile-aside {
     position: fixed;
     left: 0;
-    background-color: var(--dark-mode-profile);
+    background-color: var(--dark-mode-bg);
     height: 100%;
-    opacity: 0;
+    opacity: 1;
+    bottom: 0;
+    width: 50%;
+  }
+  
+.main-header .profile-aside .container-aside{
+    display: flex;
+    flex-direction: column;
+  }
+  .main-header .profile-aside .container-aside .profile-header{
+    text-align: center;
+    background-color: var(--dark-mode-profile);
+    box-shadow: 0px 2px 3px 0px #1111135d;
+  }
+  .main-header .profile-aside .container-aside .profile-header .profile-img{
+    max-width: 70px;
+    margin: 20px auto auto;
+  }
+  .main-header .profile-aside .container-aside .profile-header img{
+    width: 100%;
+  
+  }
+  .main-header .profile-aside .container-aside .profile-header .profile-titles{
+    width: 100%;
+  
+  }
+  .main-header .profile-aside .container-aside .profile-header .profile-titles h2{
+    color: var(--principal-title);
+    font-size: clamp(.82em,6vw,1.2em);
+    text-transform: capitalize;
+  }
+  .main-header .profile-aside .container-aside .profile-header .profile-titles h3{
+    color: var(--title-color);
+    font-size:var(--font-size);
+    margin-top: .40em;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .main-header .profile-aside .container-aside .profile-header .profile-titles h4{
+    color: var(--title-color);
+    font-size: var(--font-size);
+    margin-top: .40em;
+    text-transform: capitalize;
+    font-weight: 500;
   }
   .main-header .main-nav .hamburguer-active{
     display: flex;
