@@ -11,7 +11,8 @@
   --dark-mode-profile:#23232f;
   --title-color:#7f7f82;
   --principal-title:#fafafc;
-  --font-size:clamp(.60em,8vw,.70em) ;
+  --font-size:clamp(.60em,8vw,.70em);
+  --color-bar:#ffc107;
 }
 
 body {
@@ -27,6 +28,11 @@ body {
   box-shadow: 0px 2px 8px 5px rgba(43, 43, 54, 0.3647058824);
   padding: 10px 20px;
   background-color: var(--dark-mode-bg);
+}
+
+.main-header .menu-profile {
+  position: relative;
+  z-index: 45;
 }
 
 .main-header .menu-profile a {
@@ -58,9 +64,16 @@ body {
   left: 0;
   background-color: var(--dark-mode-bg);
   height: 100%;
-  opacity: 1;
+  opacity: 0.5;
   top: 0;
   width: 60%;
+  transform: translateX(-160%);
+  transition: all 0.5s ease-in-out;
+}
+
+.main-header .profile-aside.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .main-header .profile-aside .container-aside {
@@ -75,8 +88,16 @@ body {
 }
 
 .main-header .profile-aside .container-aside .profile-header .profile-img {
-  max-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80px;
+  height: 80px;
   margin: 20px auto auto;
+  background-color: rgb(48, 48, 48);
+  padding: 20px;
+  border-radius: 100%;
+  border: 1px solid white;
 }
 
 .main-header .profile-aside .container-aside .profile-header img {
@@ -91,6 +112,8 @@ body {
   color: var(--principal-title);
   font-size: clamp(0.82em, 6vw, 1.2em);
   text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .main-header .profile-aside .container-aside .profile-header .profile-titles h3 {
@@ -109,8 +132,27 @@ body {
   font-weight: 500;
 }
 
+.main-header .profile-aside .container-aside .profile-header .profile-social-midias .social-profiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.main-header .profile-aside .container-aside .profile-header .profile-social-midias .social-profiles li a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .main-header .profile-aside .container-aside .profile-biografy {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 1.3em 20px;
 }
 
 .main-header .profile-aside .container-aside .profile-biografy .profile-information {
@@ -127,24 +169,104 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 20px;
 }
 
 .main-header .profile-aside .container-aside .profile-biografy .profile-information .city {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 20px;
 }
 
 .main-header .profile-aside .container-aside .profile-biografy .profile-information h2 {
-  font-size: clamp(0.9em, 8vw, 1.1em);
+  font-size: clamp(0.5em, 8vw, 0.9em);
   color: var(--principal-title);
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main-header .profile-aside .container-aside .profile-biografy .profile-information p {
   font-size: clamp(0.7em, 8vw, 0.8em);
-  color: var(--principal-title);
+  color: #7f7f82;
+  font-weight: 400;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main {
+  width: 100%;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing .bar {
+  width: 100%;
+  background-color: var(--dark-mode-profile);
+  height: 4px;
+  position: relative;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing .bar::before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 4px;
+  background-color: var(--color-bar);
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing .progressing-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing .progressing-text h2{
+  color: #fafafc;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.main-header .profile-aside .container-aside .profile-biografy .progresing-main .progressing .progressing-text p{
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-size: .90em;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .download-cv-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .download-cv-main .download {
+  padding: 0.8em 2.3em;
+  flex: 1;
+  border: 1px solid var(--color-bar);
+  background-color: var(--color-bar);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .download-cv-main .download a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--dark-mode-bg);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .download-cv-main .download:hover {
+  border: 1px solid var(--color-bar);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-header .profile-aside .container-aside .profile-biografy .download-cv-main .download:hover a {
+  color: #fafafc;
 }
 
 .main-header .main-nav .hamburguer-active {
