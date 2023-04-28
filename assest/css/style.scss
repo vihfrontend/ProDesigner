@@ -54,7 +54,7 @@ body{
     height: 100%;
     opacity: 1;
     top: 0;
-    width: 50%;
+    width: 60%;
   }
   
 .main-header .profile-aside .container-aside{
@@ -96,6 +96,38 @@ body{
     margin-top: .40em;
     text-transform: capitalize;
     font-weight: 500;
+  }
+  .main-header .profile-aside .container-aside .profile-biografy{
+    width: 100%;
+  }
+  .main-header .profile-aside .container-aside .profile-biografy .profile-information{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    }
+    .main-header .profile-aside .container-aside .profile-biografy .profile-information .resinde{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 20px;
+    }
+    .main-header .profile-aside .container-aside .profile-biografy .profile-information .city{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px 20px;
+    }
+  .main-header .profile-aside .container-aside .profile-biografy .profile-information h2{
+    font-size: clamp(.90em,8vw,1.1em);
+    color: var(--principal-title);
+  }
+  .main-header .profile-aside .container-aside .profile-biografy .profile-information p{
+    font-size: clamp(.70em,8vw,.80em);
+    color: var(--principal-title);
   }
   .main-header .main-nav .hamburguer-active{
     display: flex;
