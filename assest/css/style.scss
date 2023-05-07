@@ -21,8 +21,9 @@ body{
 }
 
 .main-header {
+    top: 0;
     display: flex;
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -50,7 +51,8 @@ body{
     cursor: pointer;
   }
   .main-header .main-logo{
-    max-width: 20px;
+    max-width: 150px;
+    margin-top: .70em;
   }
   .main-header .main-logo a img{
     width: 100%;
@@ -65,6 +67,7 @@ body{
     width: 60%;
     transform: translateX(-160%);
     transition: all .5s ease-in-out;
+    z-index: 40;
   }
   .main-header .profile-aside.active{
     transform: translateX(0);
@@ -78,7 +81,7 @@ body{
   }
   .main-header .profile-aside .container-aside .profile-header{
     text-align: center;
-    background-color: var(--dark-mode-profile);
+    background-color: var(--purple-bg);
     box-shadow: 0px 2px 3px 0px #1111135d;
   }
   .main-header .profile-aside .container-aside .profile-header .profile-img{
@@ -109,14 +112,14 @@ body{
     letter-spacing: 2px;
   }
   .main-header .profile-aside .container-aside .profile-header .profile-titles h3{
-    color: var(--title-color);
+    color: var(--principal-title);
     font-size:var(--font-size);
     margin-top: .40em;
     text-transform: capitalize;
     font-weight: 500;
   }
   .main-header .profile-aside .container-aside .profile-header .profile-titles h4{
-    color: var(--title-color);
+    color: var(--principal-title);
     font-size: var(--font-size);
     margin-top: .40em;
     text-transform: capitalize;
@@ -239,6 +242,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 4px;
+    cursor: pointer;
   }
   .main-header .main-nav .hamburguer-active span{
     width: 20px;
@@ -266,7 +270,7 @@ body{
     transition: all .3s ease-in-out;
   }
   .main-header .main-nav .main-itens.open{
-    height: 40vh;
+    height: calc(100vh - 10vh);
     overflow: auto;
     opacity: 1;
   }
@@ -285,48 +289,31 @@ body{
   // background: url('../images/pexels-mateusz-dach-450035.jpg');
   padding: .90em 1.2em;
   display: flex;
-  border-radius: 4px;
   margin-top: 1.4em;
+  flex-direction: column;
 }
 
-.main-hero .hero-container .hero-text h2{
-  color: #fafafc;
-  font-size: 1.5em;
-  padding: .40em .50em;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: Arial, Helvetica, sans-serif;
+.main-hero .hero-container {
+  max-width: 650px;
+  align-items: center;
+  justify-content: center;
 }
-.main-hero .hero-container .hero-text p{
-  color: rgb(243, 243, 243);
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 1.2em;
-  line-height: 1.4;
+.main-hero .hero-container .img-container{
+  max-width: 150px;
+  margin-top: 4em;
 }
-.main-hero .hero-container .hero-text .main-button{
-  margin-top: 1.8em;
+.main-hero .hero-container .img-container img{
+  width: 100%;
 }
-.main-hero .hero-container .hero-text .main-button .btn-hero{
-  padding: .80em 2em;
-  text-align: left;
-  border: none;
-  background-color: var(--btn-purple);
+.main-hero .hero-container .tech-logo{
+  max-width: 250px;
 }
-.main-hero .hero-container .hero-text .main-button .btn-hero a{
-  font-size: 1.2em;
-  text-decoration: none;
-  color: #fafafc;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
+.main-hero .hero-container .tech-logo img{
+  width: 100%;
 }
-.hero-text {
-  display: flex;
-  gap: 20px;
+.main-hero .hero-container .text-hero p{
+  line-height: 2;
 }
-.hero-text .box{
-  width: 250px;
-  height: 250px;
-  background-color: #eeeeee;
+.main-hero .hero-container .text-hero p span{
+  color: #442f81;
 }
