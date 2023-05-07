@@ -285,37 +285,30 @@ body {
 }
 
 .main-hero .hero-container {
-  background-color: #23232f;
-  background: linear-gradient(45deg, rgba(35, 35, 47, 0.5607843137), rgba(35, 35, 47, 0.5607843137)), url("../images/mulher-de-negocios-sobrecarregada-digitando-estatisticas-financeiras-no-laptop-sentado-a-mesa-no-escritorio-da-empresa-startup-tarde-da-noite.jpg");
-  margin: 1.4em 1.2em;
-  background-size: cover;
+  background-color: rgb(22, 22, 22);
+  background: url("../images/pexels-mateusz-dach-450035.jpg");
+  height: 100vh;
   padding: 0.9em 1.2em;
   display: flex;
-  height: 70vh;
   border-radius: 4px;
+  margin-top: 1.4em;
 }
 
 .main-hero .hero-container .hero-text h2 {
   color: #fafafc;
-  font-size: 1.8em;
-  background-color: rgba(35, 35, 47, 0.5803921569);
+  font-size: 1.5em;
   padding: 0.4em 0.5em;
   font-weight: 800;
   text-align: center;
   letter-spacing: 2px;
   font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
 }
 
-.main-hero .hero-container .hero-text h2 span {
-  color: rgb(101, 194, 101);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.main-hero .hero-container .hero-text code p {
+.main-hero .hero-container .hero-text p {
   color: rgb(243, 243, 243);
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1.2em;
+  line-height: 1.4;
 }
 
 .main-hero .hero-container .hero-text .main-button {
@@ -323,14 +316,14 @@ body {
 }
 
 .main-hero .hero-container .hero-text .main-button .btn-hero {
-  padding: 0.8em 2.3em;
+  padding: 0.8em 2em;
   text-align: left;
   border: none;
   background-color: rgb(55, 160, 86);
 }
 
 .main-hero .hero-container .hero-text .main-button .btn-hero a {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-decoration: none;
   color: #fafafc;
   text-transform: uppercase;
