@@ -7,15 +7,17 @@
     font-family: 'Poppins',Arial, Helvetica, sans-serif;
 }
 :root{
-    --dark-mode-bg: #20202a;
-    --dark-mode-profile:#23232f;
+    --dark-mode-bg: #eeeeee;
+    --dark-mode-profile:#333333;
+    --purple-bg:#917FB3;
+    --btn-purple:#5C469C;
     --title-color:#7f7f82;
     --principal-title:#fafafc;
     --font-size:clamp(.60em,8vw,.70em);
     --color-bar:#ffc107;
 }
 body{
-    background-color: #23232f;
+    background-color: var(--dark-mode-bg);
 }
 
 .main-header {
@@ -259,9 +261,8 @@ body{
   width: 100%;
 }
 .main-hero .hero-container{
-  background-color: rgb(22, 22, 22);
-  background: url('../images/pexels-mateusz-dach-450035.jpg');
-  height: 100vh;
+  background-color: var(--purple-bg);
+  // background: url('../images/pexels-mateusz-dach-450035.jpg');
   padding: .90em 1.2em;
   display: flex;
   border-radius: 4px;
@@ -290,7 +291,7 @@ body{
   padding: .80em 2em;
   text-align: left;
   border: none;
-  background-color: rgb(55, 160, 86);
+  background-color: var(--btn-purple);
 }
 .main-hero .hero-container .hero-text .main-button .btn-hero a{
   font-size: 1.2em;
